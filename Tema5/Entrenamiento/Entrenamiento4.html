@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <title>Entrenamiento 4</title>
+    </head>
+    <body> 
+        <h1>Entrenamiento 4</h1>
+        <script>
+            function showMessage(){
+                let alert = window.confirm("Quiere seguir recibiendo notificaciones?")
+                if(!alert){
+                    clearInterval(intervalo);
+                    alert("Recordatorio cancelado");
+                }
+            }
+            let intervalo = setInterval(showMessage(),5000);
+        </script>
+    </body>
+</html>

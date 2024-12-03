@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    </head>
+    <body>
+       <h1>Redimensionar la ventana</h1> 
+       <script>
+        // Pedimos por entrada el tamaño de la pantalla para redimensionar
+        let prmpt = window.prompt("Indica una cantidad en píxeles: ");
+
+        if(prmpt !== null){
+            console.log("El usuario pulsó Aceptar en la introducción de datos");
+
+            // Pedimos confirmación al usuario antes de realizar la operación
+            let confirma = window.confirm(`¿Estás seguro de aplicar ${prmpt}px?`);
+            if(confirma === false){
+                console.log("El usuario no estaba seguro.");
+            }
+            else{
+                console.log("El usuario estaba seguro");
+
+                //Redimensionamos la ventana
+                window.resizeBy(prmpt, prmpt);
+                console.log(`Ventana redimensionada ${prmpt}x${prmpt}px`);
+            }
+        }
+        else{
+            console.log("El usuario canceló la introducción de datos.");
+        }
+        console.log(navigator.userAgent);
+
+        let navigatorData = "Navegador" + navigator.userAgent + navigator.language + navigator.geolocation;
+        console.log(navigatorData);
+        setTimeout(() => {
+            console.log
+        })
+    </script>
+    </body>
+</html>
