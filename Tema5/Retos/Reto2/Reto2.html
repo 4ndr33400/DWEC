@@ -28,7 +28,10 @@
             border-radius: 8px;
             box-shadow: 0 2px 10px rgba(0, 0,0, 0.1);
             width: 600px;
-        }    
+        }
+        .container p{
+            opacity: 0;
+        }
         
     </style>
 </head>
@@ -58,14 +61,26 @@
         <br><br>
     
         <label for="paragraph">Comentarios: </label>
-        <br><br>
+        <br>
         <textarea id="paragraph" rows="5" cols="40" placeholder="Escribe tus comentarios aquí..."></textarea>
         <br>
         <span id="paragraphError" style="color: red; font-size: 0.9em;"></span>
+        <br>
+        <button type="button" onclick="readParagraph()">Añadir párrafo</button> 
+        <br><br><br><br>
+
+        <input type="text" id="inputWord" placeholder="Introduce una palabra">
+        <button type="button" onclick="findWord()">Buscar palabra</button>
         <br><br>
-    
-        <button type="button" onclick="readParagraph()">Añadir párrafo</button>
-        <button>Buscar</button>
+
+        <button type="button" onclick="countWords()">Contar palabras</button>
+        <p id="numberWords"></p>
+        <br>
+
+        <button onclick="transitionText()">Transicion</button>
+        <br><br>
+
+             
     </form>
     <p id = "visits"></p>
     <script src="Reto2.js"></script>

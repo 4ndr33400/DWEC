@@ -87,6 +87,42 @@ function increaseVisits() {
         document.getElementById('visits').textContent = "No hay visitas.";
     }
 }
+//Reto 3 y 4
+function findWord(){
+    let inputWord = document.getElementById("inputWord").value;
+    let bodyContent = document.body.innerHTML; 
+    let regex = new RegExp(`(${inputWord})`, 'gi'); // Expresión regular para encontrar la palabra.
+    document.body.innerHTML = bodyContent.replace(regex, '<mark>$1</mark>');  // Reemplaza las coincidencias con la etiqueta <mark>
+}
+//Reto 5
+function countWords(){
+    let numberWords = document.querySelectorAll('p');
+    let totalWords = 0;
+
+    numberWords.forEach(numberWords => {
+        let text = numberWords.textContent.trim();
+        if(text){
+            totalWords += text.split(/\s+/).length;
+        }
+    });
+    document.getElementById("numberWords").textContent = `Este texto tiene ${totalWords}`;
+
+}
+//Reto 6
+function transitionText(){
+    let paragraphs = document.querySelectorAll('.container p');
+    let i = 0;
+    function animationParagraph(){
+        if(i < paragraphs.length){
+            paragraphs[i].style.opacity = 1;
+            paragraphs[i].style.animation = "transitionParagraph 2s ease-in-out";
+            i++
+            setTimeout(animationParagraph,2000);
+        }
+    }
+}
+//Reto 7 
+
+
 increaseVisits();
-window.find()
 document.getElementById("formulario").reset();
