@@ -3,23 +3,29 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Menu Navideño</title>
+    <style>
+        h1 {
+            background-color: red;
+            color: white;
+        }
+    </style>
 </head>
 <body>
-    <h1>MENU NAVIDEÑO</h1>
+    <h1>MENU NAVIDEÑO</h1>
     <form id="menuForm" action="#">
         <fieldset>
-            <legend>Primer plato</legend>
-            <p>Escoge el/los entrantes: </p> 
-            <label><input type="checkbox" name="starters">Ensalada especial</label>
+            <legend>Entrantes</legend>
+            <p>Escoge el/los entrantes que desees: </p> 
+            <label><input id="ensalada" type="checkbox" name="starters">Ensalada especial</label>
             <br>
-            <label><input type="checkbox" name="starters">Jamón ibérico</label>
+            <label><input id="jamon" type="checkbox" name="starters">Jamón ibérico</label>
         </fieldset>
         <br><br>
         <fieldset>
             <legend>Segundo plato</legend>
             <p>Escoge un segundo plato</p>
-            <label><input type="radio" name="main">Pavo trufado</label>
+            <label><input type="radio" name="main" checked>Pavo trufado</label>
             <br>
             <label><input type="radio" name="main">Salmón al cava</label>
         </fieldset>
@@ -40,10 +46,9 @@
         </fieldset>
         <br>
         <input type="button" value="Limpiar" onclick="deleteForm()">
-        <input type="button" value="Enviar Menu" onclick="reviewMenu()">
+        <input type="button" value="Enviar Menu" onclick="reviewResult()">
     </form>
+    <div id="result" style="display: none;"> pepe</div>
     <script src="Ejercicio2.js"></script>
-    <h2>Menu Seleccionado</h2>
-    <p></p>
 </body>
 </html>

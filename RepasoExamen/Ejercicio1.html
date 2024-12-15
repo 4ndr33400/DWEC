@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <ul id="IndiceSeccion">
+        <li class="menuSeccion">
+            <a href="#">Paso 1</a>
+        </li>
+        <li class="menuSeccion">
+            <a href="#">Paso 2</a>
+        </li>
+        <li class="menuSeccion">
+            <a href="#">Paso 3</a>
+        </li>
+    </ul>
+    
+    <script>
+        let indice = document.getElementById("IndiceSeccion");
+        for(let i=0; i < indice.childNodes.length; i++){
+            console.log(indice.childNodes[i].textContent); //mostrará "LI" para cada hijo
+        }
+    </script>
+</body>
+</html>
