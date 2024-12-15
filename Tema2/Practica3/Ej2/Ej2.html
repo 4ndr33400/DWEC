@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+    </head>
+    <body>
+        <h1>GESTION DE INVENTARIO</h1>
+        <select id="option">
+            <option value=""> -- Seleccione una opcion -- </option>
+            <option value="1">1. Agregar producto</option>
+            <option value="2">2. Eliminar producto</option>
+            <option value="3">3. Actualizar precio</option>
+            <option value="4">4. Mostrar inventario</option>
+            <option value="5">5. Mostrar stock</option>
+        </select>
+        <button onclick="chooseOption()">Click aqui</button>
+
+        <input type="text" id="nameProduct" placeholder="Introduce el nombre del producto">
+        <input type="number" id="priceProduct" placeholder="Introduce el precio">
+        <input type="number" id="idProduct" placeholder="Introduce el ">
+
+        <p id="message"></p>
+        <div id="showInventory"></div>
+        <div id="showStock"></div>
+    </body>
+</html>

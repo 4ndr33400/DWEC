@@ -1,0 +1,60 @@
+body {
+    font-family: 'Arial', sans-serif;
+    background-color: #f7f7f7;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+}
+
+.container {
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    text-align: center;
+}
+
+h1 {
+    color: #333;
+}
+
+p, h2, h3 {
+    color: #666;
+}
+
+input {
+    padding: 10px;
+    width: 50px;
+    text-align: center;
+    margin-right: 10px;
+}
+
+button {
+    padding: 10px 20px;
+    background-color: darkblue;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: #218838;
+}
+
+#resultMessage {
+    font-weight: bold;
+    margin-top: 20px;
+}
+
+#correctNumbers {
+    list-style-type: none;
+    padding: 0;
+}
+
+#correctNumbers li {
+    color: #28a745;
+    font-size: 18px;
+}
